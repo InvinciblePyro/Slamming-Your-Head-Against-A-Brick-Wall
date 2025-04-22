@@ -1,0 +1,112 @@
+{
+    "Title": "Slamming Your Head Against a Brick Wall",
+    "Credits": "Template by: Adam Smith (amsmith@ucsc.edu).<br>Game by: Samuel Rex Spivey",
+    "InitialLocation": "Intro0",
+    "Locations": {
+        "Intro0": {
+            "Body": "You stand in front of a never ending white brick wall.",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro1"
+                },
+                {
+                    "Text": "[skip]",
+                    "Target": "Intro10"
+                }
+            ]
+        },
+        "Intro1": {
+            "Body": "Nothing but the white void, and this brick wall, surrounds you.",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro2"
+                }
+            ]
+        },
+        "Intro2": {
+            "Body": "You feel this urge.",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro3"
+                }
+            ]
+        },
+        "Intro3": {
+            "Body": "this...",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro4"
+                }
+            ]
+        },
+        "Intro4": {
+            "Body": "HUNGER",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro5"
+                }
+            ]
+        },
+        "Intro5": {
+            "Body": "to see whats behind the never ending white brick wall.",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro6"
+                }
+            ]
+        },
+        "Intro6": {
+            "Body": "But you possess no tools.",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro7"
+                }
+            ]
+        },
+        "Intro7": {
+            "Body": "So, in your desperation...",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro8"
+                }
+            ]
+        },
+        "Intro8": {
+            "Body": "YOU SLAM YOUR HEAD INTO THE BRICK WALL!",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro9"
+                }
+            ]
+        },
+        "Intro9": {
+            "Body": "*~*CCCRRRRUUUNNNCHHHH!!!!*~*",
+            "Choices": [
+                {
+                    "Text": "[next]",
+                    "Target": "Intro10"
+                }
+            ]
+        },
+        "Intro10": {
+            "Body": "But the brick wall remains..."
+        },
+        "Wall": {
+            "Body": ""
+        },
+        "$RockRetail$": {
+            "Body": ""
+        }
+        
+    }
+    
+}
