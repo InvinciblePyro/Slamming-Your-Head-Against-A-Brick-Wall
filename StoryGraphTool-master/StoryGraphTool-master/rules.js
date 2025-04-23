@@ -80,7 +80,7 @@ class Wall extends Scene{
         if (this.PlInv.length > 0){ for (const el of this.PlInv){ this.engine.addChoice(el, el)} }
         
         //Rock and key chances increase the more you slam
-        this.RockChance += 0.01;
+        this.RockChance += 0.05;
         this.keyChance += 0.01;
 
         //displays wall
@@ -146,12 +146,12 @@ class Wall extends Scene{
 
             //Key stats
             this.Haskey = false;
-            this.keyChance = 2;
+            this.keyChance = 5;
 
             //Player Stats
             this.HP = 99;
             this.slams = 1;
-            this.healing = 0.01;
+            this.healing = 0.02;
             this.PlDamage = 1;
             this.PlInv = [];
         }
@@ -199,7 +199,7 @@ class Wall extends Scene{
         //Wall
         this.Walldamage = Math.floor(Math.random() * this.WallMaxDam) + this.WallMinDam;
         this.WallHP -= this.PlDamage;
-        this.WallMaxDam += (this.slams * 0.001);
+        this.WallMaxDam += (this.slams * 0.0005);
         
         //healing 
         this.HP += this.healing * this.slams;
@@ -231,7 +231,7 @@ class RockRetail extends Scene {
         this.pickPrice = 999;
 
         if (this.prevScene.rocks > 0) {
-            this.engine.addChoice("1 Rock: +slams/10 HP", "1 Rock: +slams/10 HP");
+            this.engine.addChoice("1 Rock: +slams/5 HP", "1 Rock: +slams/5 HP");
             this.engine.addChoice("1 Rock: +5 Damage", "1 Rock: +5 Damage");
             this.engine.addChoice(this.pickPrice + " Rock: Pickaxe", "Pickaxe");
 
@@ -245,9 +245,10 @@ class RockRetail extends Scene {
 
     handleChoice(choice) {
         switch (choice) {
-            case "1 Rock: +slams/10 HP":
+            case "1 Rock: +slams/5 HP":
                 this.prevScene.rocks--;
-                this.prevScene.HP += this.prevScene.slams * 0.1;
+                this.prevScene.HP += this.prevScene.slams * 0.2;
+                this.engine.show("Current Health: " + Math.floor(this.prevScene.HP));
                 this.engine.gotoScene(RockRetail, null, this.prevScene);
                 break;
             case "1 Rock: +5 Damage":
